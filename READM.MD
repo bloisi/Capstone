@@ -1,5 +1,5 @@
-# Project Title
-### Data Engineering Capstone Project
+# Data Engineering Capstone Project
+
 ## Step 1: Scope the Project and Gather Data
 #### Scope 
 The main goal of this project is to demonstrate all abilities achieved in Udacity data engineering course. Three datasets has chosen for the project.
