@@ -28,6 +28,8 @@ cicid	i94yr	i94mon	i94cit	i94res	i94port	arrdate	i94mode	i94addr	depdate	...	ent
 
 ## Step 4: Run ETL to Model the Data
 
+First step is create a S3 bucket and launch a Redshift cluster. The parquet and csv files are uploaded to S3 bucket. The stage tables are created and using COPY command, the data are loaded in Redshift. The last step is load data from stage tables to star schema tables.
+
 ## Step 5: Complete Project Write Up
 
 The data was increased by 100x: Amazon Redshift allows Petabyte-scale data warehousing. The database Redshift is very scalable, easy to increase nodes, including automatic changes.
