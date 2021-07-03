@@ -26,5 +26,13 @@ cicid	i94yr	i94mon	i94cit	i94res	i94port	arrdate	i94mode	i94addr	depdate	...	ent
 ## Step 3: Define the Data Model
   <img src="capstone.jpg" width="850" title="hover text">
 
-* Step 4: Run ETL to Model the Data
-* Step 5: Complete Project Write Up
+## Step 4: Run ETL to Model the Data
+
+## Step 5: Complete Project Write Up
+
+The data was increased by 100x: Amazon Redshift allows Petabyte-scale data warehousing. The database Redshift is very scalable, easy to increase nodes, including automatic changes.
+(https://aws.amazon.com/redshift/features/)
+
+The data populates a dashboard that must be updated on a daily basis by 7am every day: Through Airflow, ETL tasks can be implemented in DAGs and scheduled to run once per day (07:00 am)
+
+The database needed to be accessed by 100+ people: Using S3, Redshift and AWS EMR (Elastic Mapreduce) combined, the solution can process data at any scale with great performance. (https://adataanalyst.com/wp-content/uploads/2020/07/emr?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
