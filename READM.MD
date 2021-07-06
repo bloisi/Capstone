@@ -36,7 +36,20 @@ cicid	i94yr	i94mon	i94cit	i94res	i94port	arrdate	i94mode	i94addr	depdate	...	ent
 
 ## Step 4: Run ETL to Model the Data
 
-First step is create a S3 bucket and launch a Redshift cluster. The parquet and csv files are uploaded to S3 bucket. The stage tables are created and using COPY command, the data are loaded in Redshift. The last step is load data from stage tables to star schema tables.
+Steps to run ETL Pipeline:
+
+* Create a S3 bucket;
+* Upload csv and parquet files to S3;
+* Launch a Redshift cluster;
+* Execute capstone.py;
+
+The capstone.py executes the following steps:
+
+* Create stage tables;
+* Load data from files in S3 to stage tables;
+* Load data from stage fact and dimension tables to fact table;
+* Check data quality in fact and dimension tables;
+* Run query samples;
 
 ## Step 5: Complete Project Write Up
 
