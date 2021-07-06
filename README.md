@@ -94,7 +94,7 @@ The capstone.py executes the following steps:
 * Check data quality in fact and dimension tables;
 * Run query samples;
 
-### Queries to check the primary key fact table and foreign key referential integrity
+### Results of queries to check the primary key fact table and foreign keys referential integrity 
 <img src="check.jpg" width="850" title="hover text">
 
 ### Results of queries cited in summary project
