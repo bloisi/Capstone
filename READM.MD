@@ -40,9 +40,8 @@ First step is create a S3 bucket and launch a Redshift cluster. The parquet and 
 
 ## Step 5: Complete Project Write Up
 
-The data was increased by 100x: Amazon Redshift allows Petabyte-scale data warehousing. The database Redshift is very scalable, easy to increase nodes, including automatic changes.
-(https://aws.amazon.com/redshift/features/)
+The data was increased by 100x: The partition could be required under files generated from SAS original files or convert cvs files in parquet partition files. The partition could be 83% faster than no partition files. It must analyze some column like date or state to partition data in parquet files. The load routine must consider the column partition to get the partition advantage. The partition creates a folder structure according to partition column values. So, load routine to copy files must create the right structure to load in Redshift database. 
+ 
+The data populates a dashboard that must be updated on a daily basis by 7am every day: Using airflow DAGs and setting default arguments you can schedule to run every day at 7am. The specific arguments execution_date and next_execution_date must be defined to DAGs start at 7am. It is important ETL pipeline starts on time otherwise it will not provide updated information to users. The cost of hiring airflow service in AWS starts at $0.49 (50 DAGs). The Airflow Workflow Jobs can be executed on Amazon EKS or Amazon ECS because they make it easier to manage and autoscale Airflow clusters. You can optimize it for cost using EC2 Spot Instances.
 
-The data populates a dashboard that must be updated on a daily basis by 7am every day: Through Airflow, ETL tasks can be implemented in DAGs and scheduled to run once per day (07:00 am)
-
-The database needed to be accessed by 100+ people: Using S3, Redshift and AWS EMR (Elastic Mapreduce) combined, the solution can process data at any scale with great performance. (https://adataanalyst.com/wp-content/uploads/2020/07/emr?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
+The database needed to be accessed by 100+ people: 
