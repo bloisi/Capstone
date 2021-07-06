@@ -1,6 +1,11 @@
 # Data Engineering Capstone Project
 
 ## Step 1: Scope the Project and Gather Data
+
+### Project Summary
+
+The objective of this project is to give some key information to US National Tourism and Trade Office. For achieve this, it was created an ETL pipeline from three dataset sources: I94 immigration, US demographics and Airport codes.So, we could give some key indicators like most movimented airports or most number of nationalities of tourists that arrives in specific airport. 
+
 #### Scope 
 The main goal of this project is to demonstrate all abilities achieved in Udacity data engineering course. Three datasets has chosen for the project.
 
