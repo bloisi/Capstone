@@ -33,6 +33,46 @@ cicid	i94yr	i94mon	i94cit	i94res	i94port	arrdate	i94mode	i94addr	depdate	...	ent
 
 ## Step 3: Define the Data Model
   <img src="capstone.jpg" width="850" title="hover text">
+  
+# Data Dictionary
+
+FACT TABLE fact_form
+
+PK "cicid" FLOAT - Primary key
+FK "id_state" VARCHAR - Foreign key from dim_state
+FK "id_time" BIGINT - Foreign key from dim_time
+FK "id_airport" VARCHAR - Foreign key from dim_airport "i94cit" FLOAT - Country code "i94res" FLOAT - Country code "i94port" VARCHAR - Port code
+"arrdate" FLOAT - Arrival Date in the USA
+"i94mode" FLOAT - (1 = 'Air' 2 = 'Sea' 3 = 'Land' 9 = 'Not reported') "depdate" FLOAT - Departure Date from the USA
+"i94bir" FLOAT - Age of Respondent in Years "i94visa" FLOAT - Visa codes collapsed into three categories (1 = Business 2 = Pleasure 3 = Student) "dtadfile" VARCHAR - Date added to I-94 Files
+"visapost" VARCHAR - Department of State where where Visa was issued "occup" VARCHAR - Occupation that will be performed in U.S. "entdepa" VARCHAR - Arrival Flag - admitted or paroled into the U.S. "entdepd" VARCHAR - Departure Flag - Departed, lost I-94 or is deceased "entdepu" VARCHAR - Update Flag - Either apprehended, overstayed, adjusted to perm residence "matflag" VARCHAR - Match flag - Match of arrival and departure records
+"biryear" FLOAT - 4 digit year of birth
+"gender" VARCHAR - Non-immigrant sex
+"airline" VARCHAR - Airline used to arrive in U.S.
+"admnum" FLOAT - INS number "fltno" VARCHAR - Flight number of Airline used to arrive in U.S.
+"visatype" VARCHAR - Class of admission legally admitting the non-immigrant to temporarily stay in U.S.
+
+DIMENSION "dim_state"
+
+PK id_state VARCHAR - Primary Key
+"state" VARCHAR - State arrive in the USA
+"male_population" FLOAT - State population "female_population" FLOAT - Female population
+"total_population" FLOAT - Total population
+"number_of_veterans" FLOAT - Total veterans
+"foreign_born" FLOAT - Total foreigners
+
+DIMENSION "dim_airport"
+
+PK id_airport VARCHAR - Primary Key
+"type" VARCHAR - Type of airport "name" VARCHAR - Name of airport "iso_country" VARCHAR - iso_country "iso_region" VARCHAR - iso_region "municipality" VARCHAR - Name of municipality "gps_code" VARCHAR - GPS coordinates "local_code" VARCHAR - local airport code "iata_code" VARCHAR - IATA airport code
+
+DIMENSION "dim_time"
+
+PK "Id_time" bigint IDENTITY(1,1) - Primary Key
+"date_file" date - Date YYYYMMDD
+"year_time" integer - Year of date
+"month_time" integer - Month of date "day_time" integer - Day of date
+  
 
 ## Step 4: Run ETL to Model the Data
 
@@ -50,6 +90,9 @@ The capstone.py executes the following steps:
 * Load data from stage fact and dimension tables to fact table;
 * Check data quality in fact and dimension tables;
 * Run query samples;
+
+### Results of queries cited in summary project
+<img src="sample_query.jpg" width="850" title="hover text">
 
 ## Step 5: Complete Project Write Up
 
