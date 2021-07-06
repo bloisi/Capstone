@@ -4,7 +4,7 @@
 
 ### Project Summary
 
-The objective of this project is to give some key information to US National Tourism and Trade Office. For achieve this, it was created an ETL pipeline from three dataset sources: I94 immigration, US demographics and Airport codes.So, we could give some key indicators like most movimented airports or most movimented days per state. 
+The objective of this project is to give some key information to US National Tourism and Trade Office. For achieve this, it was created an ETL pipeline from three dataset sources: I94 immigration, US demographics and Airport codes.So, we could give some key indicators like most movimented airports or most movimented days considering state. 
 
 #### Scope 
 
@@ -92,7 +92,7 @@ The capstone.py executes the following steps:
 * Run query samples;
 
 ### Results of queries cited in summary project
-<img src="sample_query.jpg" width="850" title="hover text">
+<img src="sample.jpg" width="850" title="hover text">
 
 ## Step 5: Complete Project Write Up
 
