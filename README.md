@@ -32,7 +32,10 @@ cicid	i94yr	i94mon	i94cit	i94res	i94port	arrdate	i94mode	i94addr	depdate	...	ent
 </pre>
 
 ## Step 3: Define the Data Model
-  <img src="capstone.jpg" width="850" title="hover text">
+
+Star schema it have been chosen because it has better performance to retrieve data. Using one fact table and the dimensions the query joins will be fast and easy to implement. You can generate key indicators and agregate information very easy way using SQL or Python. It is possible use a OLAP tool giving a much possibilities to end user. The star schema is very indicated to work with kind of tool. Follow below the ERD:
+
+<img src="capstone.jpg" width="850" title="hover text">
   
 # Data Dictionary
 
